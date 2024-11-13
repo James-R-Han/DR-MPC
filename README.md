@@ -1,5 +1,9 @@
+## Paper
+https://arxiv.org/abs/2410.10646
+## Video
+https://youtu.be/GUZlGBk60uY
 
-## Setup Instructions
+## Code Setup Instructions
 
 Assuming your current directory path is 'clone_location'.
 
