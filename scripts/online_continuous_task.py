@@ -26,6 +26,7 @@ class OnlineCTTraining:
 
     def __init__(self):
         self.config_master = ConfigMaster()
+        assert self.config_master.config_general.env.continuous_task is True, "This script is for continuous task only"
         self.device = self.config_master.config_general.device
         self.config_training = self.config_master.config_training.online_ct
 

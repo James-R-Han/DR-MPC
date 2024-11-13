@@ -26,6 +26,7 @@ class OnlineETTraining:
 
     def __init__(self):
         self.config_master = ConfigMaster()
+        assert self.config_master.config_general.env.continuous_task is False, "Online ET training is only for episodic tasks"
         self.device = self.config_master.config_general.device
         self.config_training = self.config_master.config_training.online_et
 
