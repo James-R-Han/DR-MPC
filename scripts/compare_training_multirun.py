@@ -9,14 +9,14 @@ from scripts.utils.plotting import moving_average
 moving_average_smooth_factor = 2500
 
 
-models_to_compare_base = {'online_continuous_task': {'DR-MPC':['medium_vis_LB6_OODFalse_0', 'medium_vis_LB6_OODTrue_0'], 
-                                                     'DRL':['medium_vis_LB6_OODFalse_0'], 
-                                                     'ResidualDRL': ['medium_vis_LB6_OODFalse_0' ]}}
-
-remappings_model = {'DR-MPC_medium_vis_LB6_OODFalse_0': 'DR-MPC (ours)',
-                    'DR-MPC_medium_vis_LB6_OODTrue_0': 'DR-MPC w/ OOD(ours)',
-                    'DRL_medium_vis_LB6_OODFalse_0': 'DRL',
-                    'ResidualDRL_medium_vis_LB6_OODFalse_0': 'ResidualDRL'}
+run_number = 0
+models_to_compare_base = {'online_continuous_task': {'DR-MPC':[f'medium_vis_LB6_OODFalse_{run_number}', f'medium_vis_LB6_OODTrue_{run_number}'], 
+                                                     'DRL':[f'medium_vis_LB6_OODFalse_{run_number}'], 
+                                                     'ResidualDRL': [f'medium_vis_LB6_OODFalse_{run_number}' ]}}
+remappings_model = {f'DR-MPC_medium_vis_LB6_OODFalse_{run_number}': 'DR-MPC (ours)',
+                    f'DR-MPC_medium_vis_LB6_OODTrue_{run_number}': 'DR-MPC w/ OOD(ours)',
+                    f'DRL_medium_vis_LB6_OODFalse_{run_number}': 'DRL',
+                    f'ResidualDRL_medium_vis_LB6_OODFalse_{run_number}': 'ResidualDRL'}
 
 
 metrics_to_compare = ['cumulative_reward_of_500.npy',

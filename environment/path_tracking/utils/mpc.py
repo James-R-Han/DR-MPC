@@ -5,7 +5,7 @@ from copy import deepcopy
 from environment.path_tracking.utils.unicycle import Unicycle
 
 from pylgmath import Transformation
-from pysteam.pysteam.problem import OptimizationProblem, WeightedLeastSquareCostTerm, StaticNoiseModel, L2LossFunc, CauchyLossFunc, L2LossFuncScaled, L2LossFuncPose
+from pysteam.pysteam.problem import OptimizationProblem, WeightedLeastSquareCostTerm, StaticNoiseModel, L2LossFunc, CauchyLossFunc, L2LossFuncPose
 from pysteam.pysteam.evaluable.se3 import SE3StateVar
 from pysteam.pysteam.evaluable.vspace import VSpaceStateVar
 from pysteam.pysteam.evaluable import Evaluable, Node

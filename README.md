@@ -17,6 +17,13 @@ Assuming you are currently in 'clone_location'.
 2. **Clone and install RVO2**  
    Next, clone the Python RVO2 repository and install it:
 
+   Note: you should have cmake installed.
+   ```
+   sudo apt update
+   sudo apt install cmake
+
+   ```
+
    ```bash
    git clone https://github.com/sybrenstuvel/Python-RVO2.git
    cd Python-RVO2

@@ -262,7 +262,7 @@ class CrowdSim(gym.Env):
         return human
 
     def get_human_actions(self):
-        # TODO: could add in FOV and sensor range restrictions here for generating human action.
+        # TODO: could add in FOV and sensor range restrictions here for humans here.
         human_actions = []  # a list of all humans' actions
 
         for i, human in enumerate(self.humans):

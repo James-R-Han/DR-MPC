@@ -85,7 +85,7 @@ class ConfigHA:
         robot.v_min = config_general.robot.v_min
         robot.w_max = config_general.robot.w_max
         robot.w_min = config_general.robot.w_min
-        robot.sensor_restriction = False # TODO: check that this isn't an issue...
+        robot.sensor_restriction = False # TODO: if True, verify correctness
         robot.sensor_FOV = 2 * np.pi
         robot.sensor_range = 4
         

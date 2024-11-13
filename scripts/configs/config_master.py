@@ -13,6 +13,7 @@ class ConfigMaster(object):
         self.config_PT = ConfigPT(self.config_general)
         self.config_training = ConfigTraining(self.config_general)
 
+        # used to name the model run
         self.identifier = self.config_general.model.policy
         self.identifier += f"_{self.config_general.model.size}"
         self.identifier += f"_{'vis' if self.config_HA.robot.visible else 'invis'}"

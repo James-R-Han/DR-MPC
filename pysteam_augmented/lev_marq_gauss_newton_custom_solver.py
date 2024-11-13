@@ -64,7 +64,6 @@ class LevMarqGaussNewtonCustomSolver(GaussNewtonSolver):
             w_perturb = relevant_perturbation[1, 0]
             if v_perturb != 0:
               if v_perturb > 0:
-                # TODO: change this to a config_master
                 max_v_perturb = (self.v_max - 1e-7) - v
               else:
                 # max_v_perturb = v - (0 + 1e-15)
