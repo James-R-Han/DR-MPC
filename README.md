@@ -1,7 +1,7 @@
 
 ## Setup Instructions
 
-Assuming you are currently in 'clone_location'.
+Assuming your current directory path is 'clone_location'.
 
 1. **Create and activate the conda environment**  
    Ensure you have conda installed. Then, run the following commands to create and activate the environment:
@@ -21,7 +21,6 @@ Assuming you are currently in 'clone_location'.
    ```
    sudo apt update
    sudo apt install cmake
-
    ```
 
    ```bash
@@ -37,10 +36,9 @@ Assuming you are currently in 'clone_location'.
    ```bash
    cd clone_location/DR-MPC
    git clone https://github.com/utiasASRL/pysteam.git
-   pip install -e pysteam
    ```
 
-4. **Set up DR-MPC**  
+4. **Setup PYTHONPATH**  
    Navigate to the `DR-MPC` directory and update your `PYTHONPATH`:
 
    ```bash
@@ -51,7 +49,13 @@ Assuming you are currently in 'clone_location'.
 5. **Run the training script**  
    This command will train a policy specified in 'scripts/configs/config_general' for a number of trials on different seeds specified in 'scripts/configs/config_training'
 
+   Note: for video generation you'll need ffmpeg
    ```bash
+   sudo apt install ffmpeg
+   ```
+
+   ```bash
+   cd clone_location/DR-MPC
    python3 scripts/online_continuous_task.py
    ```
 
@@ -61,3 +65,5 @@ Assuming you are currently in 'clone_location'.
    ```bash
    python3 scripts/compare_training_multirun.py
    ```
+
+The codebase is largely seprated into the environment ('environment') and training ('scripts'). The environment is modularized into the path tracking and human avoidance components as indicated by the folder names. RL learning algo (SAC), models (DRL, ResidualDRL, DR-MPC), OOD pipeline, etc. are all contained in the 'scripts' folder.

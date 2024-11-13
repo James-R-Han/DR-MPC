@@ -5,13 +5,14 @@ from copy import deepcopy
 from environment.path_tracking.utils.unicycle import Unicycle
 
 from pylgmath import Transformation
-from pysteam.pysteam.problem import OptimizationProblem, WeightedLeastSquareCostTerm, StaticNoiseModel, L2LossFunc, CauchyLossFunc, L2LossFuncPose
+from pysteam.pysteam.problem import OptimizationProblem, WeightedLeastSquareCostTerm, StaticNoiseModel, L2LossFunc, CauchyLossFunc
+from pysteam_augmented.extra_loss_func import L2LossFuncPose
 from pysteam.pysteam.evaluable.se3 import SE3StateVar
 from pysteam.pysteam.evaluable.vspace import VSpaceStateVar
 from pysteam.pysteam.evaluable import Evaluable, Node
-from pysteam.pysteam.evaluable.stereo import ComposeLandmarkEvaluator, HomoPointStateVar, HomoPointErrorEvaluator, HomoPointErrorEvaluator2, HomoPointErrorEvaluator3, HomoPointErrorEvaluator4
-from pysteam.pysteam.evaluable.se3.se3_evaluators import LogMapEvaluator, SE3ErrorEvaluator, ExpMapEvaluator, InverseEvaluator, ComposeEvaluator, ComposeInverseEvaluator, SE3LateralEvaluator, LogEvaluator, SE3LateralErrorEvaluator
-from pysteam.pysteam.evaluable.vspace.vspace_evaluators import NegationEvaluator, ScalarAdditionEvaluator, AdditionEvaluator, ScalarMultEvaluator, MatrixMultEvaluator, VSpaceErrorEvaluator, MatrixMultEvaluatorRHS, MatrixMultEvaluatorTran, ScalarInverseEvaluator, ScalarLogBarrierEvaluator
+from pysteam.pysteam.evaluable.se3.se3_evaluators import LogMapEvaluator, SE3ErrorEvaluator, ExpMapEvaluator, InverseEvaluator, ComposeEvaluator, ComposeInverseEvaluator
+from pysteam_augmented.extra_se3_evaluators import LogEvaluator
+from pysteam.pysteam.evaluable.vspace.vspace_evaluators import NegationEvaluator, AdditionEvaluator, ScalarMultEvaluator, MatrixMultEvaluator, VSpaceErrorEvaluator
 from pysteam_augmented.lev_marq_gauss_newton_custom_solver import LevMarqGaussNewtonCustomSolver
 
 
