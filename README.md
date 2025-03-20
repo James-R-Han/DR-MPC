@@ -1,5 +1,7 @@
 ## Paper
 https://arxiv.org/abs/2410.10646
+
+https://ieeexplore.ieee.org/document/10904316
 ## Video
 https://youtu.be/GUZlGBk60uY
 
