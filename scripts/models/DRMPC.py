@@ -68,11 +68,11 @@ class ActorNetwork(nn.Module):
         v_lower = config_master.config_general.robot.v_min
         v_higher = 0.8*config_master.config_general.robot.v_max # it is okay to put this number to v_max, but a nice property is that when alpha = 0 we know it is for sure focused on path tracking.
         v_middle = (v_lower + v_higher) / 2
-        w_lowest = -config_master.config_general.robot.w_min
+        w_lowest = config_master.config_general.robot.w_min
         w_lower = w_lowest/3
-        w_higher = w_lowest/3
         w_highest = config_master.config_general.robot.w_max
-
+        w_higher = w_highest/3
+        
         v_range_lower = (v_middle - v_lower)/2
         v_range_higher = (v_higher - v_middle)/2
         self.v_scaling = torch.Tensor([v_range_lower, v_range_lower, v_range_lower, v_range_higher, v_range_higher, v_range_higher]).to(config_master.config_general.device)
